@@ -1,0 +1,56 @@
+body, html{
+    margin: 0%;
+    padding: 0%;
+}
+
+body{
+    background-color: rgb(238, 196, 245);
+}
+
+#heading{
+    color: rgb(23, 139, 48);
+    text-align: center;
+    font-weight: bold;
+    font-family:'Cambria';
+    text-shadow: 1px 1px black;
+    font-size: 40px;
+}
+
+.box{
+    background-color: rgb(255, 255, 255);
+    align-items: center;
+    width: 40%;
+    height: 100%;
+    border: 3px solid rgb(182, 122, 195);
+    margin: auto;
+    padding: 10px;
+}
+
+img, figure{
+    /* text-align: center;
+    align-items: center; */
+    /* margin: ; */
+    padding: 5px;
+    width: 70%;
+}
+
+.pic{
+    text-align: center;
+
+}
+
+figcaption{
+    font-size: small;
+}
+
+#kku-uni{
+    color: rgb(51, 162, 73);
+}
+
+.popular {
+    border: 4px dotted rgb(232, 182, 182);
+}
+
+/* li:nth-child(odd){
+    border: 3px dashed rgb(232, 182, 182);
+} */
