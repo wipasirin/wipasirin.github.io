@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prob2</title>
+    <script type="text/javascript">
+        function readInput() {
+            const nums = new Array();
+            while (true) {
+                let text = Number(prompt("Enter a positive integer"));
+                if (Number.isInteger(text) && (text > 0)) {
+                    nums.push(text)
+                } else if (text < 0) {
+                    break;
+                }
+            }
+            return nums;
+        }
+
+        const list = readInput();
+        var isEmptyTxt = list.length === 0 ? "that is empty," : "";
+        
+        if (list.length === 0) {
+            list.push(0);
+        }
+
+        displayStats(list);
+
+        function displayStats(list) {
+            const sortedList = list.sort((a, b) => a - b);
+            const getList = (sortedList.length == 1 && sortedList[0] == 0) ? "" : sortedList;
+            var result = "For the list " + getList + isEmptyTxt + " the average is, " + getAvg(sortedList) + ", the minimum is " + getMin(sortedList) + ", and the maximum is " + getMax(sortedList)
+            alert(result)
+        }
+
+        function getAvg(sortedList) {
+            var total = 0;
+            for(var i = 0; i < sortedList.length; i++) {
+                total += sortedList[i];
+            }
+            var avg = total / sortedList.length;-1
+            return avg.toFixed(2);
+        }
+
+        function getMin(sortedList) {
+            return sortedList[0]
+        }
+
+        function getMax(sortedList) {
+            return sortedList[sortedList.length - 1]
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Statistics Calculator!</h1>
+    <p>Write the web app to prompt for positive integer until the user enter a negative integer</p>
+    <ul>
+        <li>If the entered text is not a positive integer number, then the web app will keep asking for a number until
+            the valid positive integer is entered</li>
+        <li>If the entered text is a negative intege, then the web app will show the statistics (average, min, max) of
+            all entered positive integers</li>
+    </ul>
+    <p>Note:</p>
+    <ol>
+        <li>You need to implement functions to check wheter an entered text is a positive integer or not and wheter an
+            entered text is a negative integer or not</li>
+        <li>You need to implement function to compute average, min,</li>
+    </ol>
+</body>
+
+</html>
