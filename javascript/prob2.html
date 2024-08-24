@@ -9,7 +9,7 @@
         function readInput() {
             const nums = new Array();
             while (true) {
-                let text = Number(prompt("Enter a positive integer"));
+                let text = Number(prompt("Enter an integer (a negative integer to quit):"));
                 if (Number.isInteger(text) && (text > 0)) {
                     nums.push(text)
                 } else if (text < 0) {
